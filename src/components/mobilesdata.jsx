@@ -33,11 +33,14 @@ function MobilesData() {
 
     <div className="productdata-data-container">
       <h1>Mobile Products</h1>
+      <div className="fullnav">
+      <div className="navtxt"> <h3>NEXTBUY</h3> </div>
       <div className="navigate-btns">
       <button className="navbtns" onClick={toHome}>Home</button>
       <button className="navbtns" onClick={toFashion}>Fashion</button>
       <button className="navbtns" onClick={toShoes}>Shoes</button>
       <button className="navbtns" onClick={toCart}>View Cart</button>
+      </div>
       </div>
       <div className="product-grid">
         {mobileProducts.map((mobile, index) => (

@@ -31,13 +31,16 @@ function FashionData() {
     return (
         <div className="productdata-data-container">
             <h1>Fashion Products</h1>
-            <div className="navigate-btns">
+            <div className="fullnav">
+            
+            <div className="navtxt"> <h3>NEXTBUY</h3> </div>
+              <div className="navigate-btns">
       <button className="navbtns" onClick={toHome}>Home</button>
       <button className="navbtns" onClick={toMobiles}>Mobiles</button>
       <button className="navbtns" onClick={toShoes}>Shoes</button>
       <button className="navbtns" onClick={toCart}>View Cart</button>
       </div>
-            
+      </div>
             <div className="product-grid">
                 {fashionProducts.map((fashion, index) => (
                     <div key={index} className="product-card">

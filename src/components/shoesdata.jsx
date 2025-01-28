@@ -34,12 +34,15 @@ navigate("/cart")
      return (
          <div className="productdata-data-container">
              <h1>Shoes</h1>
+             <div className="fullnav">
+             <div className="navtxt"> <h3>NEXTBUY</h3> </div>
              <div className="navigate-btns">
        <button className="navbtns" onClick={toHome}>Home</button>
        <button className="navbtns" onClick={toFashion}>Fashions</button>
        <button className="navbtns" onClick={toMobiles}>Mobiles</button>
        <button className="navbtns" onClick={toCart}>View Cart</button>
        
+       </div>
        </div>
         <div className="product-grid">
           {shoeProducts.map((shoes, index) => (

@@ -35,7 +35,7 @@ function Signup() {
     <div className="main">
       <div className="nav">
         <h2 className="header">Signup Page</h2>
-
+        <br />
         <h5>Type Your Fullname</h5>
         <input
           name="fullname"

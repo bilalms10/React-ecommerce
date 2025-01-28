@@ -42,6 +42,7 @@ const totalPrice = cart.reduce(
       <h1>Cart</h1>
       
       <div className="productdata-data-container">
+        
       <button onClick={toHome}>Home</button>
        <button onClick={toFashion}>Fashions</button>
        <button onClick={toShoes}>Shoes</button>

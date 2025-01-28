@@ -46,7 +46,7 @@ function Home() {
                     src="https://media.gq.com/photos/60d21a25ab6b8cc6e9d2c80a/16:9/w_1280,c_limit/SNEAKER_GUIDE_OPENER.jpg" 
                     alt="shoes" 
                 />
-                <h3>Shoes</h3>
+                <h3>Shoes </h3>
             </div>
         </div>
         </div>

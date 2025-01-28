@@ -9,6 +9,7 @@ import ShoesData from "./components/shoesdata";
 import MobilesData from "./components/mobilesdata";
 import { Products } from "./components/products";
 import Cart from "./components/cart";
+import NavScroll from "./components/Nav";
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -31,6 +32,7 @@ function App() {
           setCart,
         }}
       >
+        <NavScroll />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

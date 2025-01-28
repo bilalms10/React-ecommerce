@@ -1,15 +1,18 @@
 import "./productdatas.css";
+import { useState } from "react";
 import { useContext } from "react";
 import { myContext } from "./contextpage";
 import { useNavigate } from "react-router-dom";
 
 function MobilesData() {
   const { Products, liked, setLiked, cart, setCart } = useContext(myContext);
+  const [addedProducts, setAddedProducts] = useState([]); 
   const navigate = useNavigate();
 
   function cartData(product) {
     if (!cart.some((item) => item.Name === product.Name)) {
       setCart([...cart, product]);
+      setAddedProducts([...addedProducts, product.Name]); 
     }
   }
 
@@ -54,8 +57,9 @@ function MobilesData() {
               <button
                 onClick={() => cartData(mobile)}
                 className="buy-btn"
+                disabled={addedProducts.includes(mobile.Name)}
               >
-                Add to Cart
+                {addedProducts.includes(mobile.Name) ? "Added to Cart" : "Add to Cart"}
               </button>
             </div>
           </div>

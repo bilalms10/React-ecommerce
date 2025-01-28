@@ -1,16 +1,19 @@
 import { useContext } from "react";
+import { useState } from "react";
 import { myContext } from "./contextpage";
 import "./productdatas.css"
 import { useNavigate } from "react-router-dom";
 
 function ShoesData (){
     const { Products, cart,setCart } = useContext(myContext)
+    const [addedProducts, setAddedProducts] = useState([]); 
     const navigate = useNavigate()
 
 
     function cartData(product) {
       if (!cart.some((item) => item.Name === product.Name)) {
         setCart([...cart, product]);
+        setAddedProducts([...addedProducts, product.Name]); 
       }
     }
     const shoeProducts = Products.filter((Products)=>Products.Type == "Shoes")
@@ -53,11 +56,13 @@ navigate("/cart")
                 <p className="description">{shoes.Description}</p>
                 <p className="price">Price: ₹{shoes.Price}</p>
                 <p className="colour">Colour: {shoes.Colour}</p>
+                
                 <button
                 onClick={() => cartData(shoes)}
                 className="buy-btn"
+                disabled={addedProducts.includes(shoes.Name)}
               >
-                Add to Cart
+                {addedProducts.includes(shoes.Name) ? "Added to Cart" : "Add to Cart"}
               </button>
               </div>
             </div>

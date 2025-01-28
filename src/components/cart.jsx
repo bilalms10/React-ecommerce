@@ -15,10 +15,15 @@ function Cart() {
       setCart([...cart]);
     }
   };
+
+
 const totalPrice = cart.reduce(
     (total, product) => total + product.Price * (product.quantity || 1),
     0
   );
+
+  
+  
 
   const removeFromCart = (product) => {
     setCart(cart.filter((item) => item.Name !== product.Name));
@@ -69,6 +74,7 @@ const totalPrice = cart.reduce(
                     onChange={(e) => handleQuantityChange(e, item)}
                   />
                 </div>
+                <p>Total : {item.Price} * {item.quantity}</p>
                 <button
                   onClick={() => removeFromCart(item)}
                   className="remove-btn"

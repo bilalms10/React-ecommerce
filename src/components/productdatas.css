@@ -80,15 +80,16 @@
   
   .buy-btn {
     background-color: #28a745;
-    color: #fff;
+    color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9rem;
   }
   
-  .buy-btn:hover {
-    background-color: #218838;
+  .buy-btn:disabled {
+    background-color: #d6d6d6;
+    color: #999;
+    
   }
   

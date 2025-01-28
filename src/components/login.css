@@ -1,0 +1,101 @@
+.bg {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        #ffcccc 0%,
+        #ffe6cc 25%,
+        #ffffcc 50%,
+        #e6ffcc 75%,
+        #ccffff 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.header{
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #585858;
+}
+
+h6 {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin: 10px 0 5px 0;
+    color: #555;
+}
+
+.user,.pass{
+    width: 250px;
+    height: 20px;
+}
+.loginbtn{
+    width: 80px;
+    margin-left: 80px;
+    background: linear-gradient(
+        to right,
+        #ffcccc 0%,
+        #ffe6cc 25%,
+        #ffffcc 50%,
+        #e6ffcc 75%,
+        #ccffff 100%
+    );
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: #555;
+}
+.frgt{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 10px 0 5px 0;
+    color: #555;
+    margin-left: 50px;
+    
+}
+.logfrgt{
+    display: flex;
+    padding-top: 10px;
+}
+.nav{
+    margin-bottom: 120px;
+    
+}
+.signupdiv{
+    padding-top: 30px;
+}
+
+.signupbtn{
+    margin-left: 80px;
+    background: linear-gradient(
+        to right,
+        #ffcccc 0%,
+        #ffe6cc 25%,
+        #ffffcc 50%,
+        #e6ffcc 75%,
+        #ccffff 100%
+    );
+    border-radius: 5px;
+    width:100px ;
+    height: 30px;
+    font-family: Arial, sans-serif;
+    color: #555;
+    
+}
+
+
+
+

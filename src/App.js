@@ -9,13 +9,15 @@ import ShoesData from "./components/shoesdata";
 import MobilesData from "./components/mobilesdata";
 import { Products } from "./components/products";
 import Cart from "./components/cart";
-//import NavScroll from "./components/Nav";
+import LikedProducts from "./components/likedProducts";
+
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
-  const [liked, setLiked] = useState([]);
+  const [liked, setLiked] = useState(Products);
   const [productData, setProductData] = useState(Products);
   const [cart, setCart] = useState([]);
+  
 
   return (
  <BrowserRouter>
@@ -41,6 +43,7 @@ function App() {
           <Route path="/fashiondata" element={<FashionData />} />
           <Route path="/shoesdata" element={<ShoesData />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/likedProducts" element= {<LikedProducts />} />
         </Routes>
       </myContext.Provider>
     </BrowserRouter>

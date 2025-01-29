@@ -3,6 +3,12 @@
     background-color: #f5f5f5;
     min-height: 100vh;
   }
+ .cart-data-container{
+  text-align: center;
+  background-color: #28a745 ;
+  height: 50px;
+  padding-top: 5px;
+ }
   
   h1 {
     text-align: center;

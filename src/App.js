@@ -17,6 +17,7 @@ function App() {
   const [liked, setLiked] = useState(Products);
   const [productData, setProductData] = useState(Products);
   const [cart, setCart] = useState([]);
+  const [likedProducts, setLikedProducts] = useState([]);
   
 
   return (
@@ -32,6 +33,8 @@ function App() {
           setProductData,
           cart,
           setCart,
+          likedProducts, 
+          setLikedProducts
         }}
       >
         

@@ -4,8 +4,9 @@ import "./productdatas.css";
 import { useNavigate } from "react-router-dom";
 
 function FashionData() {
-  const { Products, cart, setCart } = useContext(myContext);
-  const [addedProducts, setAddedProducts] = useState([]); 
+  const { Products, cart, setCart, likedProducts, setLikedProducts } = useContext(myContext);
+  const [addedProducts, setAddedProducts] = useState([]);
+  const [likedItems, setLikedItems] = useState([]); 
   const navigate = useNavigate();
 
   const fashionProducts = Products.filter((product) => product.Type === "Fashion");
@@ -13,21 +14,36 @@ function FashionData() {
   function cartData(product) {
     if (!cart.some((item) => item.Name === product.Name)) {
       setCart([...cart, product]);
-      setAddedProducts([...addedProducts, product.Name]); 
+      setAddedProducts([...addedProducts, product.Name]);
+    }
+  }
+
+  
+  function likeProduct(product) {
+    if (!likedItems.includes(product.Name)) {
+      setLikedItems([...likedItems, product.Name]);
+      setLikedProducts([...likedProducts, product]); 
     }
   }
 
   function toCart() {
     navigate("/cart");
   }
+
   function toHome() {
     navigate("/home");
   }
+
   function toMobiles() {
     navigate("/mobilesdata");
   }
+
   function toShoes() {
     navigate("/shoesdata");
+  }
+
+  function toLiked() {
+    navigate("/likedProducts");
   }
 
   return (
@@ -38,18 +54,11 @@ function FashionData() {
           <h3>NEXTBUY</h3>
         </div>
         <div className="navigate-btns">
-          <button className="navbtns" onClick={toHome}>
-            Home
-          </button>
-          <button className="navbtns" onClick={toMobiles}>
-            Mobiles
-          </button>
-          <button className="navbtns" onClick={toShoes}>
-            Shoes
-          </button>
-          <button className="navbtns" onClick={toCart}>
-            View Cart
-          </button>
+          <button className="navbtns" onClick={toHome}>Home</button>
+          <button className="navbtns" onClick={toMobiles}>Mobiles</button>
+          <button className="navbtns" onClick={toShoes}>Shoes</button>
+          <button className="navbtns" onClick={toCart}>View Cart</button>
+          <button className="navbtns" onClick={toLiked}>Liked Products</button>
         </div>
       </div>
       <div className="product-grid">
@@ -67,6 +76,13 @@ function FashionData() {
                 disabled={addedProducts.includes(fashion.Name)}
               >
                 {addedProducts.includes(fashion.Name) ? "Added to Cart" : "Add to Cart"}
+              </button>
+              <button
+                onClick={() => likeProduct(fashion)}
+                className="like-btn"
+                disabled={likedItems.includes(fashion.Name)}
+              >
+                {likedItems.includes(fashion.Name) ? "Liked" : "Like"}
               </button>
             </div>
           </div>

@@ -7,23 +7,22 @@ function Cart() {
   const { cart, setCart } = useContext(myContext);
   const navigate = useNavigate();
 
-
   const handleQuantityChange = (e, product) => {
     const value = parseInt(e.target.value, 10);
     if (value >= 1) {
-      product.quantity = value;
-      setCart([...cart]);
+      setCart(
+        cart.map((item) =>
+          item.Name === product.Name ? { ...item, quantity: value } : item
+        )
+      );
     }
   };
 
-
+ 
   const totalPrice = cart.reduce(
     (total, product) => total + product.Price * (product.quantity || 1),
     0
   );
-
-
-
 
   const removeFromCart = (product) => {
     setCart(cart.filter((item) => item.Name !== product.Name));
@@ -47,12 +46,12 @@ function Cart() {
       <h1>Cart</h1>
 
       <div className="cart-data-container">
-
         <button className="navbtns" onClick={toHome}>Home</button>
         <button className="navbtns" onClick={toFashion}>Fashions</button>
         <button className="navbtns" onClick={toShoes}>Shoes</button>
         <button className="navbtns" onClick={toMobiles}>Mobiles</button>
       </div>
+      
       <h5>Total Price: ₹{totalPrice}</h5>
 
       <div className="cart-grid">
@@ -63,18 +62,21 @@ function Cart() {
               <h2>{item.Name}</h2>
               <p>{item.Description}</p>
               <p>Price: ₹{item.Price}</p>
+              
               <div>
                 <label htmlFor={`quantity-${index}`}>Quantity:</label>
                 <input
                   id={`quantity-${index}`}
-                  style={{ width: "50px", marginLeft: "5px" }}
+                  style={{ width: "60px", marginLeft: "5px" }}
                   type="number"
                   value={item.quantity || 1}
                   min="1"
                   onChange={(e) => handleQuantityChange(e, item)}
                 />
               </div>
-              <p>Total : {item.Price} * {item.quantity}</p>
+              
+              <p><strong>Item Total:</strong> ₹{item.Price * (item.quantity || 1)}</p>
+
               <button
                 onClick={() => removeFromCart(item)}
                 className="remove-btn"
@@ -85,10 +87,10 @@ function Cart() {
           </div>
         ))}
       </div>
-
     </div>
   );
 }
 
 export default Cart;
+
 

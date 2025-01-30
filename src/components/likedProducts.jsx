@@ -1,64 +1,44 @@
 import { useContext } from "react";
 import { myContext } from "./contextpage";
-import { useNavigate } from "react-router-dom";
+import "./likedProducts.css";
 
 function LikedProducts() {
-    const { liked, SetLiked } = useContext(myContext)
-    const navigate = useNavigate()
+  const { likedProducts, setLikedProducts } = useContext(myContext);
 
-    const removeFromLiked = (product) => {
-        SetLiked(liked.filter((item) => item.Name !== product.Name));
-    };
+  const removeLikedProduct = (product) => {
+    setLikedProducts(likedProducts.filter(item => item.Name !== product.Name));
+  };
+  
 
-    function toHome() {
-        navigate("/home")
-    }
-    function toFashion() {
-        navigate("/fashiondata")
-    }
-    function toMobiles() {
-        navigate("/mobiledata")
-    }
-    function toShoes() {
-        navigate("/shoesdata")
-    }
 
-    return
-    (
-        <div className="liked-container">
-            <h1>Liked Products</h1>
+  return (
+    <div className="liked-products-container">
+      <h1>Liked Products</h1>
+      <div className="liked-products-grid">
+        {likedProducts.length > 0 ? (
+          likedProducts.map((product, index) => (
+            <div key={index} className="liked-product-card">
+              <div className="liked-product-image">{product.Image}</div>
+              <div className="liked-product-details">
+                <h2>{product.Name}</h2>
+                <p>{product.Description}</p>
+                <p>Price: ₹{product.Price}</p>
 
-            <div className="liked-data-container">
-
-                <button className="navbtns" onClick={toHome}>Home</button>
-                <button className="navbtns" onClick={toFashion}>Fashions</button>
-                <button className="navbtns" onClick={toShoes}>Shoes</button>
-                <button className="navbtns" onClick={toMobiles}>Mobiles</button>
+                <button 
+                  className="remove-btn"
+                  onClick={() => removeLikedProduct(product)}>
+                  Remove
+                </button>
+                
+              </div>
             </div>
-
-
-            <div className="like-grid">
-                {liked.map((item, index) => (
-                    <div key={index} className="cart-item">
-                        <div className="cart-image">{item.Image}</div>
-                        <div className="cart-details">
-                            <h2>{item.Name}</h2>
-                            <p>{item.Description}</p>
-                            <p>Price: ₹{item.Price}</p>
-
-
-                            <button
-                                onClick={() => removeFromLiked(item)}
-                                className="remove-btn"
-                            >
-                                Remove
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-        </div>
-    )
+          ))
+        ) : (
+          <p>No liked products yet.</p>
+        )}
+      </div>
+    </div>
+  );
 }
+
 export default LikedProducts;

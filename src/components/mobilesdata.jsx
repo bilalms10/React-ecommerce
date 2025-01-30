@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 function MobilesData() {
   const { Products, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext);
   const [addedProducts, setAddedProducts] = useState([]); 
+  const [likedItems, setLikedItems] = useState([]); 
   const navigate = useNavigate();
 
   function cartData(product) {
@@ -17,6 +18,13 @@ function MobilesData() {
   }
 
   const mobileProducts = Products.filter((product) => product.Type === "Mobile");
+
+  function likeProduct(product) {
+    if (!likedItems.includes(product.Name)) {
+      setLikedItems([...likedItems, product.Name]);
+      setLikedProducts([...likedProducts, product]); 
+    }
+  }
 
   function toCart() {
     navigate("/cart");
@@ -29,6 +37,9 @@ function MobilesData() {
   }
   function toShoes() {
     navigate("/shoesdatas");
+  }
+  function toLiked() {
+    navigate("/likedProducts");
   }
 
   return (
@@ -43,6 +54,7 @@ function MobilesData() {
       <button className="navbtns" onClick={toFashion}>Fashion</button>
       <button className="navbtns" onClick={toShoes}>Shoes</button>
       <button className="navbtns" onClick={toCart}>View Cart</button>
+      <button className="navbtns" onClick={toLiked}>Liked Products</button>
       </div>
       </div>
       <div className="product-grid">
@@ -60,6 +72,14 @@ function MobilesData() {
                 disabled={addedProducts.includes(mobile.Name)}
               >
                 {addedProducts.includes(mobile.Name) ? "Added to Cart" : "Add to Cart"}
+                
+              </button>
+              <button
+                onClick={() => likeProduct(mobile)}
+                className="like-btn"
+                disabled={likedItems.includes(mobile.Name)}
+              >
+                {likedItems.includes(mobile.Name) ? "Liked" : "Like"}
               </button>
             </div>
           </div>

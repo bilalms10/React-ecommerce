@@ -5,8 +5,9 @@ import "./productdatas.css"
 import { useNavigate } from "react-router-dom";
 
 function ShoesData (){
-    const { Products, cart,setCart } = useContext(myContext)
+    const { Products, cart,setCart, likedProducts, setLikedProducts } = useContext(myContext)
     const [addedProducts, setAddedProducts] = useState([]); 
+    const [likedItems, setLikedItems] = useState([]); 
     const navigate = useNavigate()
 
 
@@ -18,7 +19,14 @@ function ShoesData (){
     }
     const shoeProducts = Products.filter((Products)=>Products.Type == "Shoes")
 
-  
+    function likeProduct(product) {
+      if (!likedItems.includes(product.Name)) {
+        setLikedItems([...likedItems, product.Name]);
+        setLikedProducts([...likedProducts, product]); 
+      }
+    }
+
+
 function toCart(){
 navigate("/cart")
 }
@@ -32,6 +40,9 @@ navigate("/cart")
    function toFashion() {
      navigate("/fashiondata");
    }
+   function toLiked(){
+    navigate("/likedProducts")
+   }
  
  
      return (
@@ -44,7 +55,7 @@ navigate("/cart")
        <button className="navbtns" onClick={toFashion}>Fashions</button>
        <button className="navbtns" onClick={toMobiles}>Mobiles</button>
        <button className="navbtns" onClick={toCart}>View Cart</button>
-       
+       <button className="navbtns" onClick={toLiked}>Liked Products</button>
        </div>
        </div>
         <div className="product-grid">
@@ -63,6 +74,13 @@ navigate("/cart")
                 disabled={addedProducts.includes(shoes.Name)}
               >
                 {addedProducts.includes(shoes.Name) ? "Added to Cart" : "Add to Cart"}
+              </button>
+              <button
+                onClick={() => likeProduct(shoes)}
+                className="like-btn"
+                disabled={likedItems.includes(shoes.Name)}
+              >
+                {likedItems.includes(shoes.Name) ? "Liked" : "Like"}
               </button>
               </div>
             </div>

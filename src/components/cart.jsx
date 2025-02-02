@@ -5,6 +5,7 @@ import { myContext } from "./contextpage";
 
 function Cart() {
   const { cart, setCart } = useContext(myContext);
+  const [purchased, setPurchased] = useState(false);
   const navigate = useNavigate();
 
   const handleQuantityChange = (e, product) => {
@@ -51,8 +52,13 @@ function Cart() {
         <button className="navbtns" onClick={toShoes}>Shoes</button>
         <button className="navbtns" onClick={toMobiles}>Mobiles</button>
       </div>
-      
+      <div className="buy" style={{paddingRight:"50px", display: "flex", backgroundColor:"lightgreen", gap:"10px", padding:"10px", alignItems:"center"}}>
       <h5>Total Price: ₹{totalPrice}</h5>
+      <button onClick={() => setPurchased(true)}>
+      {purchased ? "Purchased" : "Purchase"}
+      
+    </button>
+    </div>
 
       <div className="cart-grid">
         {cart.map((item, index) => (

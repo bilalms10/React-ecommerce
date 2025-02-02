@@ -10,6 +10,9 @@ import MobilesData from "./components/mobilesdata";
 import { Products } from "./components/products";
 import Cart from "./components/cart";
 import LikedProducts from "./components/likedProducts";
+import AdminPage from "./components/adminpage";
+import Users from "./components/users";
+
 
 
 function App() {
@@ -18,14 +21,17 @@ function App() {
   const [productData, setProductData] = useState(Products);
   const [cart, setCart] = useState([]);
   const [likedProducts, setLikedProducts] = useState([]);
-  
+  const [loggedInUser, setLoggedInUser] = useState();
+
 
   return (
- <BrowserRouter>
+    <BrowserRouter>
       <myContext.Provider
         value={{
           userDetails,
           setUserDetails,
+          loggedInUser,
+          setLoggedInUser,
           Products,
           liked,
           setLiked,
@@ -33,20 +39,22 @@ function App() {
           setProductData,
           cart,
           setCart,
-          likedProducts, 
+          likedProducts,
           setLikedProducts
         }}
       >
-        
+
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/adminpage" element={<AdminPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/mobilesdata" element={<MobilesData />} />
           <Route path="/fashiondata" element={<FashionData />} />
           <Route path="/shoesdata" element={<ShoesData />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/likedProducts" element= {<LikedProducts />} />
+          <Route path="/likedProducts" element={<LikedProducts />} />
+          <Route path="/users" element={<Users />} />
         </Routes>
       </myContext.Provider>
     </BrowserRouter>

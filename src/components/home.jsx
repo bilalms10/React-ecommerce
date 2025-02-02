@@ -23,6 +23,9 @@ function Home() {
     function toLiked() {
         navigate('/likedProducts');
     }
+    function logout(){
+        navigate("/")
+    }
 
     return (
         <div>
@@ -32,6 +35,7 @@ function Home() {
                 <div className="navbtns">
                     <button className="navbtn" onClick={toCart}>Cart</button>
                     <button className="navbtn" onClick={toLiked}>Liked</button>
+                    <button className="navbtn" onClick={logout}>logout</button>
                 </div>
             </div>
             <div className="contentdiv">

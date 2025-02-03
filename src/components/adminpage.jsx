@@ -4,11 +4,11 @@ function AdminPage() {
   const navigate = useNavigate();
 
   function toUsers() {
-    navigate("/users"); 
+    navigate("/users");
   }
 
   function toEditProducts() {
-    navigate("/editproducts"); 
+    navigate("/editproducts");
   }
 
   return (

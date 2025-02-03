@@ -12,7 +12,7 @@ import Cart from "./components/cart";
 import LikedProducts from "./components/likedProducts";
 import AdminPage from "./components/adminpage";
 import Users from "./components/users";
-
+import EditProducts from "./components/editProducts";
 
 
 function App() {
@@ -55,6 +55,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/likedProducts" element={<LikedProducts />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/editProducts" element={< EditProducts />}  />
         </Routes>
       </myContext.Provider>
     </BrowserRouter>

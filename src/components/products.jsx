@@ -1,7 +1,7 @@
 
 export const Products = [
     {   Brand : "Samsung",
-        Type : "Phone",
+        Type : "Mobile",
         Name: "S24 Ultra",
         Description: "Samsung S24 Ultra",
         Colour: "Silver",
@@ -160,6 +160,7 @@ export const Products = [
     },
 
     {   
+        Brand : "Axtron",
         Type : "Fashion",
         Name: "Axtorm ",
         Description: "Men Full Sleeve Printed Hooded Sweatshirt",
@@ -174,7 +175,9 @@ export const Products = [
             />
         ),
     },
-    {   Type : "Fashion",
+    {  
+        Brand : "GLITO",
+        Type : "Fashion",
         Name: "GLITO",
         Description: "Men Full Sleeve Printed Hooded Sweatshirt",
         Colour: "Black",
@@ -189,6 +192,7 @@ export const Products = [
         ),
     },
     {  
+        Brand : "IMSA MODA",
         Type : "Fashion",
         Name: "IMSA MODA",
         Description: "Men Full Sleeve Solid Sweatshirt",
@@ -204,6 +208,7 @@ export const Products = [
         ),
     },
     {  
+        Brand : "Veirdo",
         Type : "Fashion",
         Name: "Veirdo",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
@@ -219,6 +224,7 @@ export const Products = [
         ),
     },
     {   
+        Brand : "FLYIND",
         Type : "Fashion",
         Name: "FLYIND VOGUE OUTFIT",
         Description: "Men Full Sleeve Printed Hooded Sweatshirt",
@@ -234,6 +240,7 @@ export const Products = [
         ),
     },
     {  
+        Brand : "GARBLY",
         Type : "Fashion",
         Name: "GARBLY",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
@@ -249,6 +256,7 @@ export const Products = [
         ),
     },
     {  
+        Brand :"IMSA MODA ",
         Type : "Fashion",
         Name: "IMSA MODA ",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
@@ -264,6 +272,7 @@ export const Products = [
         ),
     },
     {   
+        Brand : "IMSA MODA",
         Type : "Fashion",
         Name: "IMSA MODA",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
@@ -279,7 +288,9 @@ export const Products = [
         ),
     },
 
-    {   Type : "Shoes",
+    {  
+        Brand : "PUMA",
+        Type : "Shoes",
         Name: "PUMA ",
         Description: "Court Gamer Sneakers For Men",
         Colour: "White",
@@ -293,7 +304,9 @@ export const Products = [
             />
         ),
     },
-    {   Type : "Shoes",
+    {   
+        Brand : "NIKE",
+        Type : "Shoes",
         Name: "NIKE",
         Description: "Air Max SYSTM Sneakers For Men",
         Colour: "Black",
@@ -308,6 +321,7 @@ export const Products = [
         ),
     },
     {   
+        Brand: "ADIDAS",
         Type : "Shoes",
         Name: "ADIDAS",
         Description: "Men Full Sleeve Solid Sweatshirt",
@@ -323,6 +337,7 @@ export const Products = [
         ),
     },
     {   
+        Brand: "asian",
         Type : "Shoes",
         Name: "asian",
         Description: "Casual Sneakers Shoes For Men Mexico-11 Sneakers For Men",
@@ -338,6 +353,7 @@ export const Products = [
         ),
     },
     {  
+        Brand: "RED TAPE ",
         Type : "Shoes",
         Name: "RED TAPE ",
         Description: "Casual Sneaker Shoes for Women | Classic Rounded Toe & Pampering Cushioned Sneakers For Women",
@@ -353,6 +369,7 @@ export const Products = [
         ),
     },
     {   
+        Brand: "Abros",
         Type : "Shoes",
         Name: "Abros",
         Description: "BOLTFLEX-ON Running Shoes For Men",
@@ -368,6 +385,7 @@ export const Products = [
         ),
     },
     {
+        Brand: "BERSACHE ",
         Type : "Shoes",
         Name: "BERSACHE  ",
         Description: "Premium Sports ,Gym, Trending, Stylish Running Shoes For Men",
@@ -383,6 +401,7 @@ export const Products = [
         ),
     },
     { 
+        Brand: "action",
         Type : "Shoes",
         Name: "action",
         Description: "NITRO-802 Lightweight Comfortable Extra Bouce Cushioned Casuals For Men",

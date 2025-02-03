@@ -8,15 +8,15 @@ function Users() {
     <div>
       <h2>Users List</h2>
       <table>
-        <thead>
+        
           <tr>
-            <th>Full Name</th><br />
-            <th>Age</th><br />
-            <th>Number</th><br />
-            <th>Email</th><br />
-            <th>Username</th><br />
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Number</th>
+            <th>Email</th>
+            <th>Username</th>
           </tr>
-        </thead>
+        
         <tbody>
           {userDetails.map((user, index) => (
             <tr key={index}>

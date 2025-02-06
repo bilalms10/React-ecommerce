@@ -1,5 +1,5 @@
+import './home.css'
 import { useNavigate } from "react-router-dom";
-import './home.css';
 
 function Home() {
     const navigate = useNavigate();
@@ -23,43 +23,44 @@ function Home() {
     function toLiked() {
         navigate('/likedProducts');
     }
-    function logout(){
-        navigate("/")
+
+    function logout() {
+        navigate("/");
     }
 
     return (
-        <div>
-
-            <div className="Navbar">
-                <h3> NEXTBUY </h3>
-                <div className="navbtns">
-                    <button className="navbtn" onClick={toCart}>Cart</button>
-                    <button className="navbtn" onClick={toLiked}>Liked</button>
-                    <button className="navbtn" onClick={logout}>logout</button>
+        <div className="home-container">
+            <div className="navbar">
+                <h3 className="logo">NEXTBUY</h3>
+                <div className="nav-buttons">
+                    <button className="nav-btn cart-btn" onClick={toCart}>Cart</button>
+                    <button className="nav-btn liked-btn" onClick={toLiked}>Liked</button>
+                    <button className="nav-btn logout-btn" onClick={logout}>Logout</button>
                 </div>
             </div>
-            <div className="contentdiv">
-                <div className="item" onClick={toMobiles}>
+
+            <div className="content">
+                <div className="item mobiles-item" onClick={toMobiles}>
                     <img
-                        className="homepic"
+                        className="home-img mobiles-img"
                         src="https://3.imimg.com/data3/SR/GR/MY-11441521/mobile-phones.jpeg"
                         alt="mobiles"
                     />
                     <h3>Mobiles</h3>
                 </div>
 
-                <div className="item" onClick={toFashion}>
+                <div className="item fashion-item" onClick={toFashion}>
                     <img
-                        className="homepic"
+                        className="home-img fashion-img"
                         src="https://img.freepik.com/premium-photo/young-man-choosing-cloths-menswear-shop_926199-2186144.jpg"
                         alt="fashion"
                     />
                     <h3>Fashion</h3>
                 </div>
 
-                <div className="item" onClick={toShoes}>
+                <div className="item shoes-item" onClick={toShoes}>
                     <img
-                        className="homepic"
+                        className="home-img shoes-img"
                         src="https://media.gq.com/photos/60d21a25ab6b8cc6e9d2c80a/16:9/w_1280,c_limit/SNEAKER_GUIDE_OPENER.jpg"
                         alt="shoes"
                     />

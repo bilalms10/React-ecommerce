@@ -2,36 +2,31 @@ import { useContext } from "react";
 import { myContext } from "./contextpage";
 
 function Users() {
-  const { userDetails } = useContext(myContext);
+  const { userDetails, loginLogs } = useContext(myContext);
 
   return (
     <div>
-      <h2>Users List</h2>
-      <table>
-        
-          <tr>
-            <th>Full Name</th>
-            <th>Age</th>
-            <th>Number</th>
-            <th>Email</th>
-            <th>Username</th>
-          </tr>
-        
-        <tbody>
-          {userDetails.map((user, index) => (
-            <tr key={index}>
-              <td>{user.fullname}</td>
-              <td>{user.age}</td>
-              <td>{user.number}</td>
-              <td>{user.email}</td>
-              <td>{user.username}</td>
-            </tr>
+      
+
+      <h2>Users Who Logged In</h2>
+      
+        <ul>
+          {loginLogs.map((user, index) => (
+            <li key={index}>
+              <strong>Full Name:</strong> {user.fullname} <br />
+              <strong>Username:</strong> {user.username} <br />
+              <strong>Age:</strong> {user.age} <br />
+              <strong>Number:</strong> {user.number} <br />
+              <strong>Email:</strong> {user.email} <br />
+              <hr />
+            </li>
           ))}
-        </tbody>
-      </table>
+        </ul>
+      
     </div>
   );
 }
 
 export default Users;
+
 

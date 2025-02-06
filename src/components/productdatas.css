@@ -112,6 +112,17 @@
   cursor: not-allowed;
 }
 
+.like-btn{
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
 
 @media (max-width: 768px) {
   .fullnav {

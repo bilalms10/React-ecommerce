@@ -14,15 +14,14 @@ import AdminPage from "./components/adminpage";
 import Users from "./components/users";
 import EditProducts from "./components/editProducts";
 
-
 function App() {
   const [userDetails, setUserDetails] = useState([]);
+  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [loginLogs, setLoginLogs] = useState([]);
   const [liked, setLiked] = useState(Products);
   const [productData, setProductData] = useState(Products);
   const [cart, setCart] = useState([]);
   const [likedProducts, setLikedProducts] = useState([]);
-  const [loggedInUser, setLoggedInUser] = useState();
-
 
   return (
     <BrowserRouter>
@@ -40,10 +39,11 @@ function App() {
           cart,
           setCart,
           likedProducts,
-          setLikedProducts
+          setLikedProducts,
+          loginLogs,
+          setLoginLogs,
         }}
       >
-
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -55,7 +55,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/likedProducts" element={<LikedProducts />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/editProducts" element={< EditProducts />}  />
+          <Route path="/editProducts" element={<EditProducts />} />
         </Routes>
       </myContext.Provider>
     </BrowserRouter>

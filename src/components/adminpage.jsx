@@ -1,3 +1,4 @@
+import './adminpage.css'
 import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
@@ -12,10 +13,10 @@ function AdminPage() {
   }
 
   return (
-    <div>
-      <h2>Admin Dashboard</h2>
-      <button onClick={toUsers}>View All Users</button>
-      <button onClick={toEditProducts}>Edit Products</button>
+    <div className="users-main">
+      <h2>Admin Page</h2>
+      <button className="users-btn" onClick={toUsers}>View All Users</button>
+      <button className="users-btn" onClick={toEditProducts}>Edit Products</button>
     </div>
   );
 }

@@ -1,4 +1,6 @@
-
+.home-container{
+  padding-bottom: 200px;
+}
 .navbar {
     display: flex;
     justify-content: space-between;

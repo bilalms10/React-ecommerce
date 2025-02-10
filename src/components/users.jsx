@@ -1,15 +1,22 @@
 import { useContext } from "react";
 import { myContext } from "./contextpage";
+import { useNavigate } from "react-router-dom";
 
 function Users() {
   const { userDetails, loginLogs } = useContext(myContext);
 
+  const navigate = useNavigate();
+
+
+  function toAdminHome(){
+    navigate('/adminpage')
+  }
   return (
     <div>
       
 
       <h2>Users Who Logged In</h2>
-      
+      <button onClick={toAdminHome}>Admin HomePage</button>
         <ul>
           {loginLogs.map((user, index) => (
             <li key={index}>

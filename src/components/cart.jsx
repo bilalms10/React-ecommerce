@@ -36,7 +36,7 @@ function Cart() {
     navigate("/fashiondata");
   }
   function toShoes() {
-    navigate("/shoesdatas");
+    navigate("/shoesdata");
   }
   function toMobiles() {
     navigate("/mobilesdata");

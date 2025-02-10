@@ -146,7 +146,7 @@ function EditProducts() {
                 {editingIndex === index ? (
                   <input type="number" name="Price" value={editedProduct.Price} onChange={handleChange} />
                 ) : (
-                  `$${product.Price}`
+                  `${product.Price}`
                 )}
               </td>
               <td>

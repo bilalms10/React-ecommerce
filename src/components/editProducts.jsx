@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { myContext } from "./contextpage";
+import { useNavigate } from "react-router-dom";
 
 function EditProducts() {
   const { productData, setProductData } = useContext(myContext);
@@ -15,6 +16,8 @@ function EditProducts() {
     count: "",
     Image: "",
   });
+
+  const navigate = useNavigate()
 
  
   const handleChange = (e) => {
@@ -78,11 +81,15 @@ function EditProducts() {
     });
   };
 
+
+  function toHome(){
+    navigate('/home')
+  }
   return (
     <div>
       <h2>Edit Products</h2>
       <button onClick={handleAdd}>Add New Product</button>
-
+     <button onClick={toHome}>Home</button>
       <table border="1" cellPadding="10">
         <thead>
           <tr>

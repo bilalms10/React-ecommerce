@@ -4,12 +4,12 @@ import "./productdatas.css";
 import { useNavigate } from "react-router-dom";
 
 function FashionData() {
-  const { Products, cart, setCart, likedProducts, setLikedProducts } = useContext(myContext);
+  const { productData, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext);
   const [addedProducts, setAddedProducts] = useState([]);
   const [likedItems, setLikedItems] = useState([]); 
   const navigate = useNavigate();
 
-  const fashionProducts = Products.filter((product) => product.Type === "Fashion");
+  const fashionProducts = productData.filter((product) => product.Type === "Fashion");
 
   function cartData(product) {
     if (!cart.some((item) => item.Name === product.Name)) {

@@ -5,7 +5,7 @@ import { myContext } from "./contextpage";
 import { useNavigate } from "react-router-dom";
 
 function MobilesData() {
-  const { Products, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext);
+  const { Products, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext)
   const [addedProducts, setAddedProducts] = useState([]); 
   const [likedItems, setLikedItems] = useState([]); 
   const navigate = useNavigate();

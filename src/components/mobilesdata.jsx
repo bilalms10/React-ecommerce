@@ -36,7 +36,7 @@ function MobilesData() {
     navigate("/fashiondata");
   }
   function toShoes() {
-    navigate("/shoesdatas");
+    navigate("/shoesdata");
   }
   function toLiked() {
     navigate("/likedProducts");

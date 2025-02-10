@@ -5,8 +5,8 @@ export const Products = [
         Name: "S24 Ultra",
         Description: "Samsung S24 Ultra",
         Colour: "Silver",
-        Price: "120000",
-        count: "1",
+        Price: 120000,
+        count: 1,
         Image: (
             <img
 
@@ -21,8 +21,8 @@ export const Products = [
         Name: "IPhone 16 Pro Max",
         Description: "Apple iPhone 16 Pro Max",
         Colour: "White",
-        Price: "150000",
-        count: "1",
+        Price: 150000,
+        count: 1,
         Image: (
             <img
 
@@ -37,7 +37,7 @@ export const Products = [
         Description: "Google's latest Pixel 8 Pro with Tensor G3 chip",
         Colour: "Blue",
         Price: 95000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -53,7 +53,7 @@ export const Products = [
         Description: "OnePlus 12 flagship with Hasselblad camera",
         Colour: "Grey",
         Price: 80000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -69,7 +69,7 @@ export const Products = [
         Description: "Sony's Xperia 1 V with outstanding camera features",
         Colour: "Black",
         Price: 140000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -85,7 +85,7 @@ export const Products = [
         Description: "Xiaomi's premium phone with Leica lenses",
         Colour: "Black",
         Price: 90000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -101,7 +101,7 @@ export const Products = [
         Description: "Samsung's foldable phone with a dynamic AMOLED display",
         Colour: "Black",
         Price: 180000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -117,7 +117,7 @@ export const Products = [
         Description: "Asus gaming phone with a Snapdragon 8 Gen 2 processor",
         Colour: "Black",
         Price: 85000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -133,7 +133,7 @@ export const Products = [
         Description: "Vivo's flagship phone with Zeiss optics",
         Colour: "Black",
         Price: 75000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -149,7 +149,7 @@ export const Products = [
         Description: "Realme's budget-friendly powerhouse",
         Colour: "Silver",
         Price: 40000,
-        count: "1",
+        count: 1,
         Image: (
             <img
 
@@ -165,8 +165,8 @@ export const Products = [
         Name: "Axtorm ",
         Description: "Men Full Sleeve Printed Hooded Sweatshirt",
         Colour: "Black",
-        Price: "499",
-        count: "10",
+        Price: 499,
+        count: 10,
         Image: (
             <img
 
@@ -181,8 +181,8 @@ export const Products = [
         Name: "GLITO",
         Description: "Men Full Sleeve Printed Hooded Sweatshirt",
         Colour: "Black",
-        Price: "649",
-        count: "10",
+        Price: 649,
+        count: 10,
         Image: (
             <img
 
@@ -197,8 +197,8 @@ export const Products = [
         Name: "IMSA MODA",
         Description: "Men Full Sleeve Solid Sweatshirt",
         Colour: "Black",
-        Price: "499",
-        count: "10",
+        Price: 499,
+        count: 10,
         Image: (
             <img
 
@@ -213,8 +213,8 @@ export const Products = [
         Name: "Veirdo",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
         Colour: "White",
-        Price: "739",
-        count: "14",
+        Price: 739,
+        count: 14,
         Image: (
             <img
 
@@ -229,8 +229,8 @@ export const Products = [
         Name: "FLYIND VOGUE OUTFIT",
         Description: "Men Full Sleeve Printed Hooded Sweatshirt",
         Colour: "Purple",
-        Price: "499",
-        count: "6",
+        Price: 499,
+        count: 6,
         Image: (
             <img
 
@@ -245,8 +245,8 @@ export const Products = [
         Name: "GARBLY",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
         Colour: "Maroon",
-        Price: "649",
-        count: "20",
+        Price: 649,
+        count: 20,
         Image: (
             <img
 
@@ -261,8 +261,8 @@ export const Products = [
         Name: "IMSA MODA ",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
         Colour: "Brown",
-        Price: "499",
-        count: "1",
+        Price: 499,
+        count: 1,
         Image: (
             <img
 
@@ -277,8 +277,8 @@ export const Products = [
         Name: "IMSA MODA",
         Description: "Men Full Sleeve Solid Hooded Sweatshirt",
         Colour: "Green",
-        Price: "499",
-        count: "10",
+        Price: 499,
+        count: 10,
         Image: (
             <img
 
@@ -294,8 +294,8 @@ export const Products = [
         Name: "PUMA ",
         Description: "Court Gamer Sneakers For Men",
         Colour: "White",
-        Price: "2649",
-        count: "5",
+        Price: 2649,
+        count: 5,
         Image: (
             <img
 
@@ -310,8 +310,8 @@ export const Products = [
         Name: "NIKE",
         Description: "Air Max SYSTM Sneakers For Men",
         Colour: "Black",
-        Price: "7736",
-        count: "2",
+        Price: 7736,
+        count: 2,
         Image: (
             <img
 
@@ -326,8 +326,8 @@ export const Products = [
         Name: "ADIDAS",
         Description: "Men Full Sleeve Solid Sweatshirt",
         Colour: "White",
-        Price: "3000",
-        count: "16",
+        Price: 3000,
+        count: 16,
         Image: (
             <img
 
@@ -342,8 +342,8 @@ export const Products = [
         Name: "asian",
         Description: "Casual Sneakers Shoes For Men Mexico-11 Sneakers For Men",
         Colour: "Navy",
-        Price: "908",
-        count: "14",
+        Price: 908,
+        count: 14,
         Image: (
             <img
 
@@ -358,8 +358,8 @@ export const Products = [
         Name: "RED TAPE ",
         Description: "Casual Sneaker Shoes for Women | Classic Rounded Toe & Pampering Cushioned Sneakers For Women",
         Colour: "White",
-        Price: "1159",
-        count: "7",
+        Price: 1159,
+        count: 7,
         Image: (
             <img
 
@@ -374,8 +374,8 @@ export const Products = [
         Name: "Abros",
         Description: "BOLTFLEX-ON Running Shoes For Men",
         Colour: "Black",
-        Price: "1127",
-        count: "20",
+        Price: 1127,
+        count: 20,
         Image: (
             <img
 
@@ -390,8 +390,8 @@ export const Products = [
         Name: "BERSACHE  ",
         Description: "Premium Sports ,Gym, Trending, Stylish Running Shoes For Men",
         Colour: "white",
-        Price: "1085",
-        count: "1",
+        Price: 1085,
+        count: 1,
         Image: (
             <img
 
@@ -406,8 +406,8 @@ export const Products = [
         Name: "action",
         Description: "NITRO-802 Lightweight Comfortable Extra Bouce Cushioned Casuals For Men",
         Colour: "White",
-        Price: "1327",
-        count: "10",
+        Price: 1327,
+        count: 10,
         Image: (
             <img
 

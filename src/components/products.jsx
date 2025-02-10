@@ -191,22 +191,7 @@ export const Products = [
             />
         ),
     },
-    {  
-        Brand : "IMSA MODA",
-        Type : "Fashion",
-        Name: "IMSA MODA",
-        Description: "Men Full Sleeve Solid Sweatshirt",
-        Colour: "Black",
-        Price: 499,
-        count: 10,
-        Image: (
-            <img
-
-                src="https://rukminim2.flixcart.com/image/612/612/xif0q/sweatshirt/y/o/a/l-chain-hud-01-imsa-moda-original-imah5tgpqgptt4qz.jpeg?q=70"
-                alt="hoodie3"
-            />
-        ),
-    },
+  
     {  
         Brand : "Veirdo",
         Type : "Fashion",

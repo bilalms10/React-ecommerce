@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 function EditProducts() {
   const { productData, setProductData } = useContext(myContext);
   const [editingIndex, setEditingIndex] = useState(null);
-  const [isAdding, setIsAdding] = useState(false);
-  const [editedProduct, setEditedProduct] = useState({
+  const [product, setProduct] = useState({
     Brand: "",
     Type: "",
     Name: "",
@@ -17,59 +16,48 @@ function EditProducts() {
     Image: "",
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
- 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setEditedProduct((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setProduct((prev) => ({ ...prev, [name]: value }));
   };
 
-  
-  const handleEdit = (index) => {
-    setEditingIndex(index);
-    setEditedProduct({ ...productData[index] }); 
-  };
 
- 
   const handleSave = () => {
-    if (!editedProduct.Name || !editedProduct.Price) {
+    if (!product.Name || !product.Price) {
       alert("Product Name and Price are required!");
       return;
     }
 
     if (editingIndex !== null) {
       const updatedProducts = [...productData];
-      updatedProducts[editingIndex] = { ...editedProduct };
+      updatedProducts[editingIndex] = product;
       setProductData(updatedProducts);
     } else {
-      setProductData((prev) => [...prev, { ...editedProduct }]);
+      setProductData([...productData, product]);
     }
 
     setEditingIndex(null);
-    setIsAdding(false);
     resetForm();
   };
 
- 
+
+  const handleEdit = (index) => {
+    setEditingIndex(index);
+    setProduct(productData[index]);
+  };
+
+
   const handleRemove = (index) => {
-    const updatedProducts = productData.filter((_, i) => i !== index);
-    setProductData(updatedProducts);
+    setProductData(productData.filter((_, i) => i !== index));
   };
 
- 
-  const handleAdd = () => {
-    setIsAdding(true);
-    setEditingIndex(null);
-    resetForm();
-  };
 
- 
   const resetForm = () => {
-    setEditedProduct({
+    setEditingIndex(null);
+    setProduct({
       Brand: "",
       Type: "",
       Name: "",
@@ -81,138 +69,47 @@ function EditProducts() {
     });
   };
 
-
-  function toHome(){
-    navigate('/home')
-  }
   return (
-    <div>
-      <h2>Edit Products</h2>
-      <button onClick={handleAdd}>Add New Product</button>
-     <button onClick={toHome}>Home</button>
-      <table border="1" cellPadding="10">
-        <thead>
-          <tr>
-            <th>Brand</th>
-            <th>Type</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Colour</th>
-            <th>Price</th>
-            <th>Count</th>
-            <th>Image</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {productData.map((product, index) => (
-            <tr key={index}>
-              <td>
-                {editingIndex === index ? (
-                  <input type="text" name="Brand" value={editedProduct.Brand} onChange={handleChange} />
-                ) : (
-                  product.Brand
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="text" name="Type" value={editedProduct.Type} onChange={handleChange} />
-                ) : (
-                  product.Type
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="text" name="Name" value={editedProduct.Name} onChange={handleChange} />
-                ) : (
-                  product.Name
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="text" name="Description" value={editedProduct.Description} onChange={handleChange} />
-                ) : (
-                  product.Description
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="text" name="Colour" value={editedProduct.Colour} onChange={handleChange} />
-                ) : (
-                  product.Colour
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="number" name="Price" value={editedProduct.Price} onChange={handleChange} />
-                ) : (
-                  `${product.Price}`
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="number" name="count" value={editedProduct.count} onChange={handleChange} />
-                ) : (
-                  product.count
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <input type="text" name="Image" value={editedProduct.Image} onChange={handleChange} />
-                ) : (
-                  <img src={product.Image || "https://via.placeholder.com/50"} alt={product.Name} width="50" />
-                )}
-              </td>
-              <td>
-                {editingIndex === index ? (
-                  <button onClick={handleSave}>Save</button>
-                ) : (
-                  <>
-                    <button onClick={() => handleEdit(index)}>Edit</button>
-                    <button onClick={() => handleRemove(index)}>Remove</button>
-                  </>
-                )}
-              </td>
-            </tr>
-          ))}
+    <div className="edit-products">
+      <h2>Manage Products</h2>
+      <button className="admin-btn" onClick={() => navigate("/home")}>Home</button>
 
-          
-          {isAdding && (
-            <tr>
-              <td>
-                <input type="text" name="Brand" value={editedProduct.Brand} onChange={handleChange} placeholder="Brand" />
-              </td>
-              <td>
-                <input type="text" name="Type" value={editedProduct.Type} onChange={handleChange} placeholder="Type" />
-              </td>
-              <td>
-                <input type="text" name="Name" value={editedProduct.Name} onChange={handleChange} placeholder="Name" />
-              </td>
-              <td>
-                <input type="text" name="Description" value={editedProduct.Description} onChange={handleChange} placeholder="Description" />
-              </td>
-              <td>
-                <input type="text" name="Colour" value={editedProduct.Colour} onChange={handleChange} placeholder="Colour" />
-              </td>
-              <td>
-                <input type="number" name="Price" value={editedProduct.Price} onChange={handleChange} placeholder="Price" />
-              </td>
-              <td>
-                <input type="number" name="count" value={editedProduct.count} onChange={handleChange} placeholder="Count" />
-              </td>
-              <td>
-                <input type="text" name="Image" value={editedProduct.Image} onChange={handleChange} placeholder="Image URL" />
-              </td>
-              <td>
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setIsAdding(false)}>Cancel</button>
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+
+      <div className="product-form">
+        <input type="text" name="Brand" placeholder="Brand" value={product.Brand} onChange={handleChange} />
+        <input type="text" name="Type" placeholder="Type" value={product.Type} onChange={handleChange} />
+        <input type="text" name="Name" placeholder="Name" value={product.Name} onChange={handleChange} required />
+        <input type="text" name="Description" placeholder="Description" value={product.Description} onChange={handleChange} />
+        <input type="text" name="Colour" placeholder="Colour" value={product.Colour} onChange={handleChange} />
+        <input type="number" name="Price" placeholder="Price" value={product.Price} onChange={handleChange} required />
+        <input type="number" name="count" placeholder="Stock Count" value={product.count} onChange={handleChange} />
+
+
+        {product.Image && <img src={product.Image} alt="Product Preview" width="50" height="50" />}
+
+        <input type="text" name="Image" placeholder="Image URL" value={product.Image} onChange={handleChange} />
+
+        <button onClick={handleSave}>{editingIndex !== null ? "Update" : "Add Product"}</button>
+        {editingIndex !== null && <button onClick={resetForm}>Cancel</button>}
+      </div>
+
+
+      <ul className="product-list">
+        {productData.map((p, index) => (
+          <li key={index} className="product-item">
+            <img src={p.Image || "https://via.placeholder.com/50"} alt={p.Name} width="50" height="50" />
+            <p><strong>{p.Name}</strong> - {p.Price} USD</p>
+            <p>{p.Brand}, {p.Type}, {p.Colour}</p>
+            <button onClick={() => handleEdit(index)}>Edit</button>
+            <button onClick={() => handleRemove(index)}>Remove</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 export default EditProducts;
+
+
+

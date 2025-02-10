@@ -1,29 +1,18 @@
-import './adminpage.css'
+import "./adminpage.css";
 import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
   const navigate = useNavigate();
 
-  function toUsers() {
-    navigate("/users");
-  }
-
-  function toEditProducts() {
-    navigate("/editproducts");
-  }
-
-  function toHome(){
-    navigate("/home");
-  }
-
   return (
-    <div className="users-main">
-      <h2>Admin Page</h2>
-      <button className="users-btn" onClick={toUsers}>View All Users</button>
-      <button className="users-btn" onClick={toEditProducts}>Edit Products</button>
-      <button className="users-btn" onClick={toHome}>Home</button>
+    <div className="admin-main">
+      <h2>Admin Panel</h2>
+      <button className="admin-btn" onClick={() => navigate("/users")}>View Users</button>
+      <button className="admin-btn" onClick={() => navigate("/editproducts")}>Manage Products</button>
+      <button className="admin-btn" onClick={() => navigate("/home")}>Home</button>
     </div>
   );
 }
 
 export default AdminPage;
+

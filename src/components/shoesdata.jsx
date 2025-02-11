@@ -1,45 +1,66 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { myContext } from "./contextpage";
 import "./productdatas.css";
 import { useNavigate } from "react-router-dom";
 
 function ShoesData() {
   const { productData, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext);
+  const [addedProducts, setAddedProducts] = useState([]);
   const navigate = useNavigate();
-
-  const shoeProducts = productData.filter((product) => product.Type === "Shoes");
 
   function cartData(product) {
     if (!cart.some((item) => item.Name === product.Name)) {
       setCart([...cart, product]);
+      setAddedProducts([...addedProducts, product.Name]);
     }
   }
 
   function toggleLike(product) {
-    setLikedProducts(
-      likedProducts.some((item) => item.Name === product.Name)
-        ? likedProducts.filter((item) => item.Name !== product.Name)
-        : [...likedProducts, product]
-    );
+    if (likedProducts.some((item) => item.Name === product.Name)) {
+      setLikedProducts(likedProducts.filter((item) => item.Name !== product.Name));
+    } else {
+      setLikedProducts([...likedProducts, product]);
+    }
+  }
+
+  const shoeProducts = productData.filter((product) => product.Type === "Shoes");
+
+  function toCart() {
+    navigate("/cart");
+  }
+  function toHome() {
+    navigate("/home");
+  }
+  function toMobiles() {
+    navigate("/mobilesdata");
+  }
+  function toFashion() {
+    navigate("/fashiondata");
+  }
+  function toLiked() {
+    navigate("/likedProducts");
   }
 
   return (
     <div className="productdata-data-container">
       <h1>Shoes</h1>
       <div className="fullnav">
-        <div className="navtxt"><h3>NEXTBUY</h3></div>
+        <div className="navtxt">
+          <h3>NEXTBUY</h3>
+        </div>
         <div className="navigate-btns">
-          <button className="navbtns" onClick={() => navigate("/home")}>Home</button>
-          <button className="navbtns" onClick={() => navigate("/fashiondata")}>Fashion</button>
-          <button className="navbtns" onClick={() => navigate("/mobilesdata")}>Mobiles</button>
-          <button className="navbtns" onClick={() => navigate("/cart")}>View Cart</button>
-          <button className="navbtns" onClick={() => navigate("/likedProducts")}>Liked Products</button>
+          <button className="navbtns" onClick={toHome}>Home</button>
+          <button className="navbtns" onClick={toFashion}>Fashion</button>
+          <button className="navbtns" onClick={toMobiles}>Mobiles</button>
+          <button className="navbtns" onClick={toCart}>View Cart</button>
+          <button className="navbtns" onClick={toLiked}>Liked Products</button>
         </div>
       </div>
       <div className="product-grid">
         {shoeProducts.map((shoes, index) => (
           <div key={index} className="product-card">
-            <div className="product-image">{shoes.Image}</div>
+            {/* <div className="product-image">{shoes.Image}</div> */}
+            <img className="product-image" src={shoes.Image} alt={shoes.name} />
             <div className="product-details">
               <h2>{shoes.Name}</h2>
               <p className="description">{shoes.Description}</p>
@@ -48,9 +69,9 @@ function ShoesData() {
               <button
                 onClick={() => cartData(shoes)}
                 className="buy-btn"
-                disabled={cart.some((item) => item.Name === shoes.Name)}
+                disabled={addedProducts.includes(shoes.Name)}
               >
-                {cart.some((item) => item.Name === shoes.Name) ? "Added to Cart" : "Add to Cart"}
+                {addedProducts.includes(shoes.Name) ? "Added to Cart" : "Add to Cart"}
               </button>
               <button
                 onClick={() => toggleLike(shoes)}
@@ -67,4 +88,3 @@ function ShoesData() {
 }
 
 export default ShoesData;
-

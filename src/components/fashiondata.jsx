@@ -45,7 +45,7 @@ function FashionData() {
       <div className="product-grid">
         {fashionProducts.map((fashion, index) => (
           <div key={index} className="product-card">
-            <div className="product-image">{fashion.Image}</div>
+            <img className="product-image" src={fashion.Image} alt={fashion.name} />
             <div className="product-details">
               <h2>{fashion.Name}</h2>
               <p className="description">{fashion.Description}</p>

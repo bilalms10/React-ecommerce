@@ -11,10 +11,10 @@ function Login() {
   const navigate = useNavigate();
 
   function loginbtn(e) {
-    e.preventDefault();
+    
 
     if (username === "admin" && password === "admin") {
-      const adminUser = { fullname: "Admin", username: "admin", role: "admin" };
+      const adminUser = { fullname: "Admin", username: "admin" };
       setLoggedInUser(adminUser);
       setLoginLogs([...loginLogs, adminUser]);
       navigate("/adminpage");
@@ -46,8 +46,8 @@ function Login() {
         {error && <p className="error-message">{error}</p>}
 
         <form className="login-form" onSubmit={loginbtn}>
-          <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}  />
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}  />
           
           <button type="submit">Login</button>
           <button onClick={toSignup}>SignUp</button>

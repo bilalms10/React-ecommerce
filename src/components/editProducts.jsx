@@ -26,23 +26,25 @@ function EditProducts() {
 
 
   const handleSave = () => {
-    if (!product.Name || !product.Price) {
-      alert("Product Name and Price are required!");
+    if (!product.Name || !product.Price || !product.Image) {
+      alert("Product Name, Price, and Image URL are required!");
       return;
     }
-
+  
     if (editingIndex !== null) {
-      const updatedProducts = [...productData];
-      updatedProducts[editingIndex] = product;
-      setProductData(updatedProducts);
+      
+      setProductData((prevProducts) => {
+        const updatedProducts = [...prevProducts];
+        updatedProducts[editingIndex] = { ...product };
+        return updatedProducts;
+      });
     } else {
-      setProductData([...productData, product]);
+      setProductData([...productData, { ...product }]);
     }
-
+  
     setEditingIndex(null);
     resetForm();
-  };
-
+  }
 
   const handleEdit = (index) => {
     setEditingIndex(index);

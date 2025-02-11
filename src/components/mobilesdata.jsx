@@ -1,19 +1,23 @@
 import "./productdatas.css";
+import { useState } from "react";
 import { useContext } from "react";
 import { myContext } from "./contextpage";
 import { useNavigate } from "react-router-dom";
 
 function MobilesData() {
-  const { Products, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext);
+  const { productData, likedProducts, setLikedProducts, cart, setCart } = useContext(myContext);
+  const [addedProducts, setAddedProducts] = useState([]); 
+  const [likedItems, setLikedItems] = useState([]); 
   const navigate = useNavigate();
-
-  const mobileProducts = Products.filter((product) => product.Type === "Mobile");
 
   function cartData(product) {
     if (!cart.some((item) => item.Name === product.Name)) {
       setCart([...cart, product]);
+      setAddedProducts([...addedProducts, product.Name]); 
     }
   }
+
+  const mobileProducts = productData.filter((product) => product.Type === "Mobile");
 
   function toggleLike(product) {
     setLikedProducts(
@@ -23,23 +27,41 @@ function MobilesData() {
     );
   }
 
+  function toCart() {
+    navigate("/cart");
+  }
+  function toHome() {
+    navigate("/home");
+  }
+  function toFashion() {
+    navigate("/fashiondata");
+  }
+  function toShoes() {
+    navigate("/shoesdata");
+  }
+  function toLiked() {
+    navigate("/likedProducts");
+  }
+
   return (
+    
+
     <div className="productdata-data-container">
       <h1>Mobile Products</h1>
       <div className="fullnav">
-        <div className="navtxt"><h3>NEXTBUY</h3></div>
-        <div className="navigate-btns">
-          <button className="navbtns" onClick={() => navigate("/home")}>Home</button>
-          <button className="navbtns" onClick={() => navigate("/fashiondata")}>Fashion</button>
-          <button className="navbtns" onClick={() => navigate("/shoesdata")}>Shoes</button>
-          <button className="navbtns" onClick={() => navigate("/cart")}>View Cart</button>
-          <button className="navbtns" onClick={() => navigate("/likedProducts")}>Liked Products</button>
-        </div>
+      <div className="navtxt"> <h3>NEXTBUY</h3> </div>
+      <div className="navigate-btns">
+      <button className="navbtns" onClick={toHome}>Home</button>
+      <button className="navbtns" onClick={toFashion}>Fashion</button>
+      <button className="navbtns" onClick={toShoes}>Shoes</button>
+      <button className="navbtns" onClick={toCart}>View Cart</button>
+      <button className="navbtns" onClick={toLiked}>Liked Products</button>
+      </div>
       </div>
       <div className="product-grid">
         {mobileProducts.map((mobile, index) => (
           <div key={index} className="product-card">
-            <div className="product-image">{mobile.Image}</div>
+            <img className="product-image" src={mobile.Image} alt={mobile.name} />
             <div className="product-details">
               <h2>{mobile.Name}</h2>
               <p className="description">{mobile.Description}</p>
@@ -48,9 +70,10 @@ function MobilesData() {
               <button
                 onClick={() => cartData(mobile)}
                 className="buy-btn"
-                disabled={cart.some((item) => item.Name === mobile.Name)}
+                disabled={addedProducts.includes(mobile.Name)}
               >
-                {cart.some((item) => item.Name === mobile.Name) ? "Added to Cart" : "Add to Cart"}
+                {addedProducts.includes(mobile.Name) ? "Added to Cart" : "Add to Cart"}
+                
               </button>
               <button
                 onClick={() => toggleLike(mobile)}
@@ -67,6 +90,4 @@ function MobilesData() {
 }
 
 export default MobilesData;
-
-
 

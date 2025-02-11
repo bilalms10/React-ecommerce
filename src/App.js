@@ -7,7 +7,7 @@ import { useState } from "react";
 import FashionData from "./components/fashiondata";
 import ShoesData from "./components/shoesdata";
 import MobilesData from "./components/mobilesdata";
-import { Products } from "./components/products";
+import { Products } from "./components/products1";
 import Cart from "./components/cart";
 import LikedProducts from "./components/likedProducts";
 import AdminPage from "./components/adminpage";

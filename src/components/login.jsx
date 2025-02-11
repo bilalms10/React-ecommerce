@@ -34,6 +34,10 @@ function Login() {
     }
   }
 
+  function toSignup(){
+    navigate('/signup')
+  }
+
   return (
     <div className="login-container">
       <div className="login-box">
@@ -46,6 +50,7 @@ function Login() {
           <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           
           <button type="submit">Login</button>
+          <button onClick={toSignup}>SignUp</button>
         </form>
       </div>
     </div>

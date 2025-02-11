@@ -7,13 +7,13 @@ function LikedProducts() {
   const { likedProducts, setLikedProducts } = useContext(myContext);
   const navigate = useNavigate();
 
-  const removeLikedProduct = (product) => {
-    setLikedProducts(likedProducts.filter(item => item.Name !== product.Name));
-  };
-  
-function toHome(){
-  navigate('/home')
-}
+  function removeLikedProduct(product) {
+    setLikedProducts(likedProducts.filter((item) => item.Name !== product.Name));
+  }
+
+  function toHome() {
+    navigate("/home");
+  }
 
   return (
     <div className="liked-products-container">
@@ -28,13 +28,11 @@ function toHome(){
                 <h2>{product.Name}</h2>
                 <p>{product.Description}</p>
                 <p>Price: ₹{product.Price}</p>
-
                 <button 
                   className="remove-btn"
                   onClick={() => removeLikedProduct(product)}>
                   Remove
                 </button>
-                
               </div>
             </div>
           ))
@@ -47,3 +45,4 @@ function toHome(){
 }
 
 export default LikedProducts;
+

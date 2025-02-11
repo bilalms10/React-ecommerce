@@ -49,7 +49,7 @@ function Cart() {
       <div className="cart-grid">
         {cart.map((item, index) => (
           <div key={index} className="cart-item">
-            <div className="cart-image">{item.Image}</div>
+            <img className="cart-image" src={item.Image} alt={item.Name} />
             <div className="cart-details">
               <h2 className="cart-item-name">{item.Name}</h2>
               <p className="cart-item-description">{item.Description}</p>

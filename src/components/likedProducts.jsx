@@ -23,7 +23,7 @@ function LikedProducts() {
         {likedProducts.length > 0 ? (
           likedProducts.map((product, index) => (
             <div key={index} className="liked-product-card">
-              <div className="liked-product-image">{product.Image}</div>
+              <img className="liked-product-image" src={product.Image} alt={product.Name} />
               <div className="liked-product-details">
                 <h2>{product.Name}</h2>
                 <p>{product.Description}</p>

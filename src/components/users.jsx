@@ -10,7 +10,7 @@ function Users() {
     <div className="users-container">
       <h2>Users Who Logged In</h2>
       <button className="admin-btn" onClick={() => navigate('/adminpage')}>Back to Admin</button>
-      
+
       <ul className="users-list">
         {loginLogs.length > 0 ? (
           loginLogs.map((user, index) => (

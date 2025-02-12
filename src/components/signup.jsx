@@ -7,6 +7,8 @@ function Signup() {
   const { userDetails, setUserDetails } = useContext(myContext);
   const navigate = useNavigate();
 
+  
+
   const [userfullname, setUserFullname] = useState("");
   const [userage, setUserage] = useState("");
   const [usernumber, setUsernumber] = useState("");
@@ -15,11 +17,18 @@ function Signup() {
   const [userpassword, setUserpassword] = useState("");
   const [error, setError] = useState("");
 
+  
+
   const validateEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
   };
 
   function savebtn() {
+    if (!userfullname || !userage || !usernumber || !useremail || !username || !userpassword) {
+      setError("All fields are required.");
+      return;
+    }
+
     if (!validateEmail(useremail)) {
       setError("Invalid email format");
       return;

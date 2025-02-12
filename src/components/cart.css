@@ -148,7 +148,7 @@
 }
 
 
-.remove-btn {
+.cart-remove-btn {
   margin-top: 10px;
   padding: 8px 12px;
   font-size: 1rem;
@@ -160,6 +160,6 @@
   transition: 0.3s;
 }
 
-.remove-btn:hover {
+.cart-remove-btn:hover {
   background-color: darkred;
 }

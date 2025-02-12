@@ -11,7 +11,7 @@ function Login() {
   const navigate = useNavigate();
 
   function loginbtn(e) {
-    
+    e.preventDefault(); 
 
     if (username === "admin" && password === "admin") {
       const adminUser = { fullname: "Admin", username: "admin" };
@@ -34,23 +34,21 @@ function Login() {
     }
   }
 
-  function toSignup(){
-    navigate('/signup')
+  function toSignup() {
+    navigate('/signup');
   }
 
   return (
     <div className="login-container">
       <div className="login-box">
         <h3 className="login-title">USER LOGIN</h3>
-        
         {error && <p className="error-message">{error}</p>}
 
         <form className="login-form" onSubmit={loginbtn}>
-          <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}  />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}  />
-          
+          <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
           <button type="submit">Login</button>
-          <button onClick={toSignup}>SignUp</button>
+          <button type="button" onClick={toSignup}>Sign Up</button>
         </form>
       </div>
     </div>
@@ -58,3 +56,4 @@ function Login() {
 }
 
 export default Login;
+

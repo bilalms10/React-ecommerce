@@ -37,6 +37,7 @@ function Cart() {
         <button className="cart-navbtn" onClick={() => navigate("/fashiondata")}>Fashion</button>
         <button className="cart-navbtn" onClick={() => navigate("/shoesdata")}>Shoes</button>
         <button className="cart-navbtn" onClick={() => navigate("/mobilesdata")}>Mobiles</button>
+        <button className="cart-navbtn" onClick={()=> navigate("/laptopdata")}>Laptops</button>
       </div>
 
       <div className="cart-summary">

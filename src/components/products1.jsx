@@ -329,14 +329,14 @@ export const Products = [
                 
     },
     { 
-        Brand: "action",
+        Brand: "ASUS",
         Type : "Laptop",
-        Name: "action",
-        Description: "NITRO-802 Lightweight Comfortable Extra Bouce Cushioned Casuals For Men",
+        Name: "ASUS Vivobook",
+        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
         Colour: "White",
-        Price: 1327,
+        Price: 32990,
         count: 10,
-        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/6/d/t/8-nitro-802-8-action-white-navy-original-imahfu9c8bgapmg5.jpeg?q=70"
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
                 
     },
 

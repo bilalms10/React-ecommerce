@@ -42,7 +42,7 @@ function LaptopData() {
           <button className="navbtns" onClick={() => navigateTo("/likedProducts")}>Liked Products</button>
         </div>
       </div>
-      <div className="product-grid">
+      <div className="laptop-product-grid">
         {laptopProducts.map((laptop, index) => (
           <div key={index} className="product-card">
             <img className="product-image" src={laptop.Image} alt={laptop.name} />

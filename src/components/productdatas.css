@@ -47,6 +47,7 @@
 }
 
 
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -146,6 +147,15 @@
   background-color: #28a745;
   color: white;
 }
+
+.laptop-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
 
 
 @media (max-width: 768px) {

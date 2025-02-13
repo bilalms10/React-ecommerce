@@ -272,6 +272,74 @@ export const Products = [
         Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/6/d/t/8-nitro-802-8-action-white-navy-original-imahfu9c8bgapmg5.jpeg?q=70"
                 
     },
+
+    { 
+        Brand: "Apple",
+        Type : "Laptop",
+        Name: "Apple MacBook AIR Apple M2",
+        Description: "Apple MacBook AIR Apple M2 - (8 GB/256 GB SSD/Mac OS Monterey)",
+        Colour: "White",
+        Price: 75990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/2/v/v/-original-imagfdeqter4sj2j.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "Acer",
+        Type : "Laptop",
+        Name: "Acer Chromebook Plus",
+        Description: "Acer Chromebook Plus Google AI Intel Core i3 N305",
+        Colour: "Steel Grey",
+        Price: 18990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/4/3/o/-original-imah27qsamfccyxz.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "SAMSUNG",
+        Type : "Laptop",
+        Name: "SAMSUNG Galaxy Book4",
+        Description: "SAMSUNG Galaxy Book4 Intel Core i5 13th Gen 1335U",
+        Colour: "Grey",
+        Price: 62990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/3/g/m/-original-imah3xrqttkdbss4.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "Lenovo",
+        Type : "Laptop",
+        Name: "Lenovo IdeaPad ",
+        Description: "Lenovo IdeaPad Slim 3 Backlit Intel Core i5 12th Gen 12450H",
+        Colour: "Arctic Grey",
+        Price: 50999,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/c/x/0/-original-imahfbdnusadgyr5.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "HP",
+        Type : "Laptop",
+        Name: "HP Intel Core",
+        Description: "HP Intel Core i5 12th Gen 1235U",
+        Colour: "White",
+        Price: 49990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/k/i/f/-original-imah4qscfq3ddvc7.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "action",
+        Type : "Laptop",
+        Name: "action",
+        Description: "NITRO-802 Lightweight Comfortable Extra Bouce Cushioned Casuals For Men",
+        Colour: "White",
+        Price: 1327,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/6/d/t/8-nitro-802-8-action-white-navy-original-imahfu9c8bgapmg5.jpeg?q=70"
+                
+    },
+
 ];
 console.log(Products)
 

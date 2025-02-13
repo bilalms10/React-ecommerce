@@ -7,6 +7,7 @@ import { useState } from "react";
 import FashionData from "./components/fashiondata";
 import ShoesData from "./components/shoesdata";
 import MobilesData from "./components/mobilesdata";
+import LaptopData from "./components/laptopdata";
 import { Products } from "./components/products1";
 import Cart from "./components/cart";
 import LikedProducts from "./components/likedProducts";
@@ -52,6 +53,7 @@ function App() {
           <Route path="/mobilesdata" element={<MobilesData />} />
           <Route path="/fashiondata" element={<FashionData />} />
           <Route path="/shoesdata" element={<ShoesData />} />
+          <Route path="/laptopdata" element={<LaptopData />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/likedProducts" element={<LikedProducts />} />
           <Route path="/users" element={<Users />} />

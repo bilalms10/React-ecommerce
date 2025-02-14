@@ -28,7 +28,7 @@ function TelevisionData() {
   }
 
   return (
-    <div className="productdata-data-container">
+    <div className="productdata-data-container Television">
       <h1>Televisions</h1>
       <div className="fullnav">
         <div className="navtxt">

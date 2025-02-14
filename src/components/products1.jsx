@@ -340,6 +340,78 @@ export const Products = [
                 
     },
 
+    { 
+        Brand: "Apple",
+        Type : "Watch",
+        Name: "Apple Watch Series 10",
+        Description: "Apple Watch Series 10 GPS 46mm Jet Black Aluminium with Black Sport Band",
+        Colour: "Black ",
+        Price: 41999,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/j/h/a/-original-imah4jndwgy9yfhz.jpeg?q=70"
+                
+    },
+
+    { 
+        Brand: "ASUS",
+        Type : "Watch",
+        Name: "ASUS Vivobook",
+        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
+        Colour: "White",
+        Price: 32990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+                
+    },
+
+    { 
+        Brand: "ASUS",
+        Type : "Watch",
+        Name: "ASUS Vivobook",
+        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
+        Colour: "White",
+        Price: 32990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+                
+    },
+
+    { 
+        Brand: "ASUS",
+        Type : "Watch",
+        Name: "ASUS Vivobook",
+        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
+        Colour: "White",
+        Price: 32990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+                
+    },
+
+    { 
+        Brand: "ASUS",
+        Type : "Watch",
+        Name: "ASUS Vivobook",
+        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
+        Colour: "White",
+        Price: 32990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+                
+    },
+
+    { 
+        Brand: "ASUS",
+        Type : "Watch",
+        Name: "ASUS Vivobook",
+        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
+        Colour: "White",
+        Price: 32990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+                
+    },
+
 ];
 console.log(Products)
 

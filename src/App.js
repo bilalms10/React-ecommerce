@@ -8,7 +8,7 @@ import FashionData from "./components/fashiondata";
 import ShoesData from "./components/shoesdata";
 import MobilesData from "./components/mobilesdata";
 import LaptopData from "./components/laptopdata";
-import WatchData from "./components/televisiondata";
+import WatchData from "./components/watchdata";
 import TelevisionData from "./components/televisiondata";
 import { Products } from "./components/products1";
 import Cart from "./components/cart";

@@ -8,6 +8,8 @@ import FashionData from "./components/fashiondata";
 import ShoesData from "./components/shoesdata";
 import MobilesData from "./components/mobilesdata";
 import LaptopData from "./components/laptopdata";
+import WatchData from "./components/televisiondata";
+import TelevisionData from "./components/televisiondata";
 import { Products } from "./components/products1";
 import Cart from "./components/cart";
 import LikedProducts from "./components/likedProducts";
@@ -54,6 +56,8 @@ function App() {
           <Route path="/fashiondata" element={<FashionData />} />
           <Route path="/shoesdata" element={<ShoesData />} />
           <Route path="/laptopdata" element={<LaptopData />} />
+          <Route path="/watchdata" element={<WatchData/>} />
+          <Route path="/televisiondata" element={<TelevisionData/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/likedProducts" element={<LikedProducts />} />
           <Route path="/users" element={<Users />} />

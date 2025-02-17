@@ -36,16 +36,24 @@ function TelevisionData() {
         </div>
         <div className="navigate-btns">
           <button className="navbtns" onClick={() => navigateTo("/home")}>Home</button>
-          <button className="navbtns" onClick={() => navigateTo("/mobilesdata")}>Mobiles</button>
-          <button className="navbtns" onClick={() => navigateTo("/shoesdata")}>Shoes</button>
+          <div className="product-dropdown">
+  <select className="nav-dropdown" onChange={(e) => navigate(e.target.value)}>
+    <option className="navbtns" value="" disabled selected>Select a Category</option>
+    <option className="navbtns" value="/fashiondata">Fashion</option>
+    <option className="navbtns" value="/shoesdata">Shoes</option>
+    <option className="navbtns" value="/laptopdata">Laptops</option>
+    <option className="navbtns"value="/watchdata">Watch</option>
+    <option className="navbtns" value="/mobilesdata">Mobiles</option>
+  </select>
+</div>
           <button className="navbtns" onClick={() => navigateTo("/cart")}>View Cart</button>
           <button className="navbtns" onClick={() => navigateTo("/likedProducts")}>Liked Products</button>
         </div>
       </div>
-      <div className="product-grid">
+      <div className="tv-product-grid">
         {televisionProducts.map((television, index) => (
           <div key={index} className="product-card">
-            <img className="product-image" src={television.Image} alt={television.name} />
+            <img className="tv-product-image" src={television.Image} alt={television.name} />
             <div className="product-details">
               <h2>{television.Name}</h2>
               <p className="description">{television.Description}</p>

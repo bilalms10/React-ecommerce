@@ -105,6 +105,32 @@ function Home() {
                     <h3>Televisions</h3>
                 </div>
 
+<footer className="footer">
+                <div className="footer-container">
+                    <div className="footer-section">
+                        <h4>About Us</h4>
+                        <p>NextBuy is your one-stop shop for the latest gadgets and fashion. We bring you the best deals on mobiles, shoes, and more.</p>
+                    </div>
+                    <div className="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li onClick={toMobiles}>Mobiles</li>
+                            <li onClick={toFashion}>Fashion</li>
+                            <li onClick={toShoes}>Shoes</li>
+                            <li onClick={toLaptops}>Laptops</li>
+                            <li onClick={toWatch}>Watches</li>
+                            <li onClick={toTv}>Televisions</li>
+                        </ul>
+                    </div>
+                    <div className="footer-section">
+                        <h4>Contact Us</h4>
+                        <p>Email: support@nextbuy.com</p>
+                        <p>Phone: +123 456 7890</p>
+                    </div>
+                </div>
+                <p className="footer-bottom">&copy; 2025 NextBuy. All rights reserved.</p>
+            </footer>
+
             </div>
         </div>
     );

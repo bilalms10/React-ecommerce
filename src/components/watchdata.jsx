@@ -36,8 +36,16 @@ function WatchData() {
         </div>
         <div className="navigate-btns">
           <button className="navbtns" onClick={() => navigateTo("/home")}>Home</button>
-          <button className="navbtns" onClick={() => navigateTo("/mobilesdata")}>Mobiles</button>
-          <button className="navbtns" onClick={() => navigateTo("/shoesdata")}>Shoes</button>
+          <div className="product-dropdown">
+  <select className="nav-dropdown" onChange={(e) => navigate(e.target.value)}>
+    <option className="navbtns" value="" disabled selected>Select a Category</option>
+    <option className="navbtns" value="/fashiondata">Fashion</option>
+    <option className="navbtns" value="/shoesdata">Shoes</option>
+    <option className="navbtns" value="/laptopdata">Laptops</option>
+    <option className="navbtns"value="/mobilesdata">Mobiles</option>
+    <option className="navbtns" value="/televisiondata">Television</option>
+  </select>
+</div>
           <button className="navbtns" onClick={() => navigateTo("/cart")}>View Cart</button>
           <button className="navbtns" onClick={() => navigateTo("/likedProducts")}>Liked Products</button>
         </div>

@@ -99,9 +99,7 @@
     color: #333;
   }
 
-  .home-img Electronics-img{
-    
-  }
+
   
  
   @media (max-width: 768px) {
@@ -135,4 +133,80 @@
       font-size: 1.5rem;
     }
   }
+  
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container {
+  flex: 1;
+}
+
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: auto;  
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 15px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f4a261;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  font-size: 14px;
+  color: #ddd;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li:hover {
+  color: #f4a261;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
   

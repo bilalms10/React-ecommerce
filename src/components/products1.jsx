@@ -353,64 +353,165 @@ export const Products = [
     },
 
     { 
-        Brand: "ASUS",
+        Brand: "Fastrack",
         Type : "Watch",
-        Name: "ASUS Vivobook",
-        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
-        Colour: "White",
-        Price: 32990,
-        count: 10,
-        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+        Name: "Fastrack Revoltt FR2Pro-1.43",
+        Description: "Premium Fashion|Metal Design|AMOLED|AOD|AI Voice Assistant Smartwatch",
+        Colour: "Black",
+        Price: 3499,
+        count: 80,
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/p/3/y/-original-imah4nbwjqkxfczp.jpeg?q=70"
                 
     },
 
     { 
-        Brand: "ASUS",
+        Brand: "Fire-Boltt",
         Type : "Watch",
-        Name: "ASUS Vivobook",
-        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
-        Colour: "White",
-        Price: 32990,
+        Name: "Fire-Boltt Legacy",
+        Description: "Fire-Boltt Legacy 36.3mm (1.43) AMOLED Bluetooth Calling with First Ever Wireless Charging Smartwatch",
+        Colour: "Black",
+        Price: 1700,
         count: 10,
-        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/o/s/v/-original-imagxp8tn2tzf9rs.jpeg?q=70"
                 
     },
 
     { 
-        Brand: "ASUS",
+        Brand: "realme",
         Type : "Watch",
-        Name: "ASUS Vivobook",
-        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
-        Colour: "White",
-        Price: 32990,
+        Name: "realme Watch S2",
+        Description: "1.32 AMOLED, auto-brightness,Gesture Control, 3D warmup guide,GPS Smartwatch",
+        Colour: "Dark Grey",
+        Price: 4199,
         count: 10,
-        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/4/l/l/-original-imah35ypcy5zxdmq.jpeg?q=70"
                 
     },
 
     { 
-        Brand: "ASUS",
+        Brand: "CMF by Nothing",
         Type : "Watch",
-        Name: "ASUS Vivobook",
+        Name: "CMF by Nothing Watch Pro 2",
         Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
         Colour: "White",
         Price: 32990,
         count: 10,
-        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/y/q/h/-original-imah2gmfunhhascz.jpeg?q=70"
                 
     },
 
     { 
-        Brand: "ASUS",
+        Brand: "SAMSUNG",
         Type : "Watch",
-        Name: "ASUS Vivobook",
-        Description: "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U",
+        Name: "SAMSUNG Galaxy Watch Ultra LTE",
+        Description: "SAMSUNG Galaxy Watch Ultra LTE",
         Colour: "White",
-        Price: 32990,
+        Price: 59999,
         count: 10,
-        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/1/u/-original-imah4dgxkumxvuer.jpeg?q=70"
+        Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/5/z/o/-original-imah8jh5zysz7tht.jpeg?q=70"
                 
     },
+
+    { 
+        Brand: "TCL",
+        Type : "Television",
+        Name: "TCL 215 cm (85 inch)",
+        Description: " QLED Ultra HD (4K) Smart Google TV T-SCREEN |Dolby Vision-Atmos | Hands-Free Voice Control| 120 Hz game Accelerator  (85C655)",
+        Colour: "Grey",
+        Price: 149990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/q/j/j/-original-imah4z93sqxvrhyd.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "TOSHIBA",
+        Type : "Television",
+        Name: "TOSHIBA Z670MP",
+        Description: "TOSHIBA Z670MP 215 cm (85 inch) QLED Ultra HD (4K) Smart VIDAA TV 256 Zones Full Array Local Dimming, 144Hz Native Refresh Rate and Power Bass Woofer  (85Z670MP)",
+        Colour: "Black",
+        Price: 199999,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/n/y/2/-original-imagvbtn7fztzzm3.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "SAMSUNG",
+        Type : "Television",
+        Name: "SAMSUNG QN90BAKL",
+        Description: "SAMSUNG QN90BAKL 163 cm (65 inch) QLED Ultra HD (4K) Smart Tizen TV  (QA65QN90BAKLXL)",
+        Colour: "Black",
+        Price: 179990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/k/d/i/qa65qn90baklxl-samsung-original-imagg9pbvntzftgx.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "LG",
+        Type : "Television",
+        Name: "LG",
+        Description: "LG 164 cm (65 inch) OLED Ultra HD (4K) Smart WebOS TV  (OLED65B8PTA)",
+        Colour: "Black",
+        Price: 253699,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/a/0/g/-original-imahygghfhmxh8zv.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "Hisense",
+        Type : "Television",
+        Name: "Hisense U7K",
+        Description: "Hisense U7K 189 cm (75 inch) Ultra HD (4K) Mini LED Smart VIDAA TV  (75U7K)",
+        Colour: "Grey",
+        Price: 149999,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/y/2/i/-original-imagzep2kbfkg7jk.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "SONY",
+        Type : "Television",
+        Name: "SONY BRAVIA 3",
+        Description: "163.9 cm (65 inch) Ultra HD (4K) LED Smart Google TV 2024 Edition with Advanced AI Processor X1 HDR, Sony Picture Core, Dolby Vision Atmos  (K-65S30)",
+        Colour: "Black",
+        Price: 106390,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/x/1/e/-original-imah3gz4zydv23zv.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "LG",
+        Type : "Television",
+        Name: "LG CX",
+        Description: "LG CX 164 cm (65 inch) OLED Ultra HD (4K) Smart WebOS TV  (OLED65CXPTA)",
+        Colour: "Grey",
+        Price: 169990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/kg9qbgw0/television/h/f/d/lg-oled65cxpta-original-imafwjxjgj2ztfgq.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "Acer",
+        Type : "Television",
+        Name: "Acer",
+        Description: "Acer 177 cm (70 inch) Ultra HD (4K) LED Smart Google TV  (AR70GR2851UD)",
+        Colour: "Grey",
+        Price: 64990,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/9/v/t/-original-imagu2cfeceq5kdg.jpeg?q=70"
+                
+    },
+    { 
+        Brand: "Blaupunkt",
+        Type : "Television",
+        Name: "Blaupunkt",
+        Description: "Blaupunkt 189 cm (75 inch) QLED Ultra HD (4K) Smart Google TV Dolby Vision & Atmos  (75QD7040)",
+        Colour: "black",
+        Price: 74999,
+        count: 10,
+        Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/television/k/1/z/75qd7040-blaupunkt-original-imagq69zedgpqf7n.jpeg?q=70"
+                
+    },
+
 
 ];
 console.log(Products)

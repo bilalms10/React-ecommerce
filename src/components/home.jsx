@@ -104,7 +104,7 @@ function Home() {
                     />
                     <h3>Televisions</h3>
                 </div>
-
+<div className='footerdiv'>
 <footer className="footer">
                 <div className="footer-container">
                     <div className="footer-section">
@@ -125,12 +125,12 @@ function Home() {
                     <div className="footer-section">
                         <h4>Contact Us</h4>
                         <p>Email: support@nextbuy.com</p>
-                        <p>Phone: +123 456 7890</p>
+                        <p>Phone: 1800-1038-138</p>
                     </div>
                 </div>
                 <p className="footer-bottom">&copy; 2025 NextBuy. All rights reserved.</p>
             </footer>
-
+            </div>
             </div>
         </div>
     );
